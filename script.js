@@ -88,10 +88,11 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-specialCharacters = [];
+
 
 // Function to prompt user for password options
-function getPasswordOptions() {
+function generatePassword() {
+  var selectedCharacters = []
   var passwordLength = prompt('Enter your password between 10 & 64');
   while (passwordLength < 10 || passwordLength > 64) {
     alert('Enter a length between 10 & 64 characteres!');
@@ -109,36 +110,33 @@ function getPasswordOptions() {
   if (passwordLowerCase) {
     selectedCharacters.push(lowerCasedCharacters);
   }
-  var passwordUpperCase = prompt('Do you require upper case characters?');
+  var passwordUpperCase = confirm('Do you require upper case characters?');
   if (passwordUpperCase) {
     selectedCharacters.push(upperCasedCharacters);
   }
-
+  
+  // Create an new array out the selected character set
   var allSelectedCharacters = selectedCharacters.flat();
-
-  return [allSelectedCharacters];
+  console.log(allSelectedCharacters)
+  
+  // Function to generate password with user input
+ for (let index = 0; index < passwordLength; index++) {
+  console.log(allSelectedCharacters[Math.floor(Math.random() * allSelectedCharacters.length)]);
+  
+ }
 }
 
-// Function for getting a random element from an array
-function getRandom(arr) {
-  var random = [];
-}
 
-// Function to generate password with user input
-function generatePassword() {
-  var pass = '';
 
-  var passDetails = getPasswordOptions();
 
-  return pass
-}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = (allSelectedCharacters[Math.floor(Math.random() * allSelectedCharacters.length)]);
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
