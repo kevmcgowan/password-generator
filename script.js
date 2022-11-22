@@ -136,7 +136,7 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  var password = (allSelectedCharacters[Math.floor(Math.random() * allSelectedCharacters.length)]);
+  var password =  [];
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
