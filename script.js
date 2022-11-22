@@ -100,7 +100,7 @@ function getPasswordOptions() {
   var passwordSpecial = confirm('Do you require special character?');
   if (passwordSpecial) {
     selectedCharacters.push(specialCharacters);
-  }
+  } 
   var passwordNumeric = confirm('Do you require numeric character?');
   if (passwordNumeric) {
     selectedCharacters.push(numericCharacters);
