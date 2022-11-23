@@ -117,13 +117,16 @@ function generatePassword() {
   
   // Create an new array out the selected character set
   var allSelectedCharacters = selectedCharacters.flat();
-  console.log(allSelectedCharacters)
+  
   
   // Function to generate password with user input
+  let randomPassword = '';
  for (let index = 0; index < passwordLength; index++) {
-  console.log(allSelectedCharacters[Math.floor(Math.random() * allSelectedCharacters.length)]);
-  
+  var randomNumber = (allSelectedCharacters[Math.floor(Math.random() * allSelectedCharacters.length)]);
+
+  randomPassword = randomPassword + randomNumber;
  }
+ return randomPassword;
 }
 
 
@@ -136,7 +139,7 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  var password =  [];
+  var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
