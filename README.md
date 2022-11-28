@@ -11,11 +11,17 @@ The password can include special characters.
 The following images shows the web application's appearance and functionality:
 
 ![password generator demo](/assets/PG_01.png)
+## Select the length of the password required, from 10 - 64 characters 
 ![Select the length of the password required, from 10 - 64 characters](/assets/PG_02.png)
+## Select OK if you want Special characters in your password othwise click cancel
 ![Select OK if you want Special characters in your password othwise click cancel](/assets/PG_03.png)
+## Select OK if you want NUMERIC characters in your password othwise click cancel
 ![Select OK if you want numeric characters in your password othwise click cancel](/assets/PG_04.png)
+## Select OK if you want LOWER CASE characters in your password othwise click cancel
 ![Select OK if you want Lower Case characters in your password othwise click cancel](/assets/PG_05.png)
+## Select OK if you want SUPPER CASE characters in your password othwise click cancel
 ![Select OK if you want Upper Case characters in your password othwise click cancel](/assets/PG_06.png)
+## Pssword Generated
 ![Password Generated](/assets/PG_07.png)
 
 
