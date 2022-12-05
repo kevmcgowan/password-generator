@@ -114,7 +114,11 @@ function generatePassword() {
   if (passwordUpperCase) {
     selectedCharacters.push(upperCasedCharacters);
   }
-  
+  else if (passwordSpecial == false && passwordNumeric == false && passwordLowerCase == false && passwordUpperCase == false) {
+    alert("Please choose at least one character type to generate password"); {
+        generatePassword()
+    }
+  }
   // Create an new array out the selected character set
   var allSelectedCharacters = selectedCharacters.flat();
   
